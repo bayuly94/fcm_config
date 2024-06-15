@@ -8,7 +8,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import 'fcm_config_interface.dart';
 import 'io_notifications_manager.dart'
-    if (dart.library.html) 'web_notification_manager.dart';
+    if (dart.library.html) 'web_notification_manager.dart' as nm;
 
 class FCMConfig extends FCMConfigInterface {
   FCMConfig._();
@@ -128,7 +128,7 @@ class FCMConfig extends FCMConfigInterface {
     }
     await _localeNotification?.close();
 
-    _localeNotification = NotificationManager(
+    _localeNotification = nm.NotificationManager(
       androidNotificationChannel: defaultAndroidChannel,
       appAndroidIcon: defaultAndroidForegroundIcon,
       displayInForeground: displayInForeground,
