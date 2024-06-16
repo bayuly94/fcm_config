@@ -9,7 +9,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'fcm_config_interface.dart';
 import 'io_notifications_manager.dart' as iosnotif;
 
-import 'web_notification_manager.dart' as webnotif;
+// import 'web_notification_manager.dart' as webnotif;
 
 class FCMConfig extends FCMConfigInterface {
   FCMConfig._();
